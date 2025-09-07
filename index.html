@@ -66,21 +66,12 @@
             font-weight: 600;
         }
 
-        .search-container {
+        .filter-container {
             background-color: white;
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 2px 8px rgba(0,0,0,0.1);
             margin-bottom: 30px;
-        }
-
-        .search-box {
-            width: 100%;
-            padding: 12px 16px;
-            border: 2px solid #005eb8;
-            border-radius: 4px;
-            font-size: 16px;
-            margin-bottom: 15px;
         }
 
         .filter-buttons {
@@ -352,17 +343,6 @@
             margin-left: 20px;
         }
 
-        .no-results {
-            text-align: center;
-            padding: 40px;
-            color: #6c757d;
-        }
-
-        .search-highlight {
-            background-color: yellow;
-            font-weight: bold;
-        }
-
         @media (max-width: 768px) {
             .content-grid {
                 grid-template-columns: 1fr;
@@ -399,8 +379,7 @@
             ⚠️ CLINICAL WARNING: This guide is for qualified laser practitioners only. Always follow MHRA guidelines and manufacturer protocols. Ensure appropriate training and insurance before performing treatments.
         </div>
 
-        <div class="search-container">
-            <input type="text" class="search-box" placeholder="Search contraindications, conditions, or assessment criteria..." id="searchBox">
+        <div class="filter-container">
             <div class="filter-buttons">
                 <button class="filter-btn active" data-category="all">All Categories</button>
                 <button class="filter-btn" data-category="medical">Medical Conditions</button>
@@ -474,7 +453,342 @@
                         </div>
                     </div>
 
-                    <!-- Rest of medical section content - abbreviated for space -->
+                    <div class="contraindication-section absolute-contraindications">
+                        <h5>HEMATOLOGICAL & COAGULATION DISORDERS</h5>
+                        <div class="contraindication-list">
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
+                                <div>
+                                    <strong>Bleeding Disorders:</strong>
+                                    <ul style="margin-left: 15px; margin-top: 8px;">
+                                        <li><span class="severity-indicator severity-high"></span>Hemophilia A (Factor VIII deficiency)</li>
+                                        <li><span class="severity-indicator severity-high"></span>Hemophilia B (Factor IX deficiency)</li>
+                                        <li><span class="severity-indicator severity-high"></span>von Willebrand disease (severe)</li>
+                                        <li><span class="severity-indicator severity-high"></span>Severe thrombocytopenia (&lt;50,000)</li>
+                                        <li><span class="severity-indicator severity-high"></span>Platelet function disorders</li>
+                                        <li><span class="severity-indicator severity-medium"></span>Moderate thrombocytopenia (50,000-100,000)</li>
+                                    </ul>
+                                </div>
+                                
+                                <div>
+                                    <strong>Blood Cancers:</strong>
+                                    <ul style="margin-left: 15px; margin-top: 8px;">
+                                        <li><span class="severity-indicator severity-high"></span>Active leukemia</li>
+                                        <li><span class="severity-indicator severity-high"></span>Lymphoma (Hodgkin's/Non-Hodgkin's)</li>
+                                        <li><span class="severity-indicator severity-high"></span>Multiple myeloma</li>
+                                        <li><span class="severity-indicator severity-high"></span>Myelodysplastic syndrome</li>
+                                        <li><span class="severity-indicator severity-medium"></span>Aplastic anemia</li>
+                                        <li><span class="severity-indicator severity-medium"></span>Polycythemia vera</li>
+                                    </ul>
+                                </div>
+                                
+                                <div>
+                                    <strong>Anticoagulation Status:</strong>
+                                    <ul style="margin-left: 15px; margin-top: 8px;">
+                                        <li><span class="severity-indicator severity-high"></span>Therapeutic anticoagulation (INR &gt;3.0)</li>
+                                        <li><span class="severity-indicator severity-medium"></span>Dual antiplatelet therapy</li>
+                                        <li><span class="severity-indicator severity-medium"></span>Recent anticoagulant initiation (&lt;1 month)</li>
+                                        <li><span class="severity-indicator severity-low"></span>Low-dose aspirin monotherapy</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contraindication-section absolute-contraindications">
+                        <h5>IMMUNOLOGICAL & AUTOIMMUNE CONDITIONS</h5>
+                        <div class="contraindication-list">
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
+                                <div>
+                                    <strong>Primary Immunodeficiencies:</strong>
+                                    <ul style="margin-left: 15px; margin-top: 8px;">
+                                        <li><span class="severity-indicator severity-high"></span>Severe combined immunodeficiency (SCID)</li>
+                                        <li><span class="severity-indicator severity-high"></span>Common variable immunodeficiency</li>
+                                        <li><span class="severity-indicator severity-high"></span>DiGeorge syndrome</li>
+                                        <li><span class="severity-indicator severity-high"></span>Chronic granulomatous disease</li>
+                                        <li><span class="severity-indicator severity-medium"></span>Selective IgA deficiency</li>
+                                    </ul>
+                                </div>
+                                
+                                <div>
+                                    <strong>Secondary Immunosuppression:</strong>
+                                    <ul style="margin-left: 15px; margin-top: 8px;">
+                                        <li><span class="severity-indicator severity-high"></span>HIV/AIDS (CD4 &lt;200)</li>
+                                        <li><span class="severity-indicator severity-high"></span>Active chemotherapy treatment</li>
+                                        <li><span class="severity-indicator severity-high"></span>Organ transplant recipients</li>
+                                        <li><span class="severity-indicator severity-high"></span>Bone marrow transplant recipients</li>
+                                        <li><span class="severity-indicator severity-medium"></span>High-dose steroid therapy (&gt;20mg prednisolone)</li>
+                                        <li><span class="severity-indicator severity-medium"></span>Biologic therapy (anti-TNF agents)</li>
+                                    </ul>
+                                </div>
+                                
+                                <div>
+                                    <strong>Autoimmune Connective Tissue Diseases:</strong>
+                                    <ul style="margin-left: 15px; margin-top: 8px;">
+                                        <li><span class="severity-indicator severity-medium"></span>Systemic lupus erythematosus</li>
+                                        <li><span class="severity-indicator severity-medium"></span>Systemic sclerosis (scleroderma)</li>
+                                        <li><span class="severity-indicator severity-medium"></span>Dermatomyositis</li>
+                                        <li><span class="severity-indicator severity-medium"></span>Mixed connective tissue disease</li>
+                                        <li><span class="severity-indicator severity-low"></span>Sjögren's syndrome</li>
+                                        <li><span class="severity-indicator severity-low"></span>Rheumatoid arthritis (well-controlled)</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contraindication-section relative-contraindications">
+                        <h5>ENDOCRINE & METABOLIC CONDITIONS</h5>
+                        <div class="contraindication-list">
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
+                                <div>
+                                    <strong>Diabetes Mellitus:</strong>
+                                    <ul style="margin-left: 15px; margin-top: 8px;">
+                                        <li><span class="severity-indicator severity-high"></span>Uncontrolled diabetes (HbA1c &gt;9%)</li>
+                                        <li><span class="severity-indicator severity-medium"></span>Diabetic neuropathy</li>
+                                        <li><span class="severity-indicator severity-medium"></span>Diabetic nephropathy</li>
+                                        <li><span class="severity-indicator severity-medium"></span>History of diabetic foot ulcers</li>
+                                        <li><span class="severity-indicator severity-low"></span>Well-controlled diabetes (HbA1c &lt;7%)</li>
+                                        <li><span class="severity-indicator severity-medium"></span>Recent diabetic ketoacidosis</li>
+                                    </ul>
+                                </div>
+                                
+                                <div>
+                                    <strong>Thyroid Disorders:</strong>
+                                    <ul style="margin-left: 15px; margin-top: 8px;">
+                                        <li><span class="severity-indicator severity-medium"></span>Hyperthyroidism (untreated)</li>
+                                        <li><span class="severity-indicator severity-medium"></span>Graves' disease</li>
+                                        <li><span class="severity-indicator severity-low"></span>Hypothyroidism (untreated)</li>
+                                        <li><span class="severity-indicator severity-low"></span>Hashimoto's thyroiditis</li>
+                                        <li><span class="severity-indicator severity-medium"></span>Recent thyroid surgery</li>
+                                        <li><span class="severity-indicator severity-high"></span>Thyroid cancer (active treatment)</li>
+                                    </ul>
+                                </div>
+                                
+                                <div>
+                                    <strong>Other Endocrine Conditions:</strong>
+                                    <ul style="margin-left: 15px; margin-top: 8px;">
+                                        <li><span class="severity-indicator severity-medium"></span>Addison's disease</li>
+                                        <li><span class="severity-indicator severity-medium"></span>Cushing's syndrome</li>
+                                        <li><span class="severity-indicator severity-low"></span>Polycystic ovary syndrome</li>
+                                        <li><span class="severity-indicator severity-medium"></span>Growth hormone disorders</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contraindication-section relative-contraindications">
+                        <h5>CARDIOVASCULAR CONDITIONS</h5>
+                        <div class="contraindication-list">
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
+                                <div>
+                                    <strong>Cardiac Device Patients:</strong>
+                                    <ul style="margin-left: 15px; margin-top: 8px;">
+                                        <li><span class="severity-indicator severity-medium"></span>Pacemaker (within 15cm of device)</li>
+                                        <li><span class="severity-indicator severity-medium"></span>Implantable cardioverter defibrillator (ICD)</li>
+                                        <li><span class="severity-indicator severity-medium"></span>Cardiac resynchronization therapy device</li>
+                                        <li><span class="severity-indicator severity-low"></span>Heart valve replacements (mechanical/tissue)</li>
+                                    </ul>
+                                </div>
+                                
+                                <div>
+                                    <strong>Vascular Conditions:</strong>
+                                    <ul style="margin-left: 15px; margin-top: 8px;">
+                                        <li><span class="severity-indicator severity-medium"></span>Severe peripheral arterial disease</li>
+                                        <li><span class="severity-indicator severity-medium"></span>Chronic venous insufficiency</li>
+                                        <li><span class="severity-indicator severity-medium"></span>Active deep vein thrombosis</li>
+                                        <li><span class="severity-indicator severity-medium"></span>Pulmonary embolism (recent)</li>
+                                        <li><span class="severity-indicator severity-low"></span>Varicose veins</li>
+                                        <li><span class="severity-indicator severity-medium"></span>Lymphedema</li>
+                                    </ul>
+                                </div>
+                                
+                                <div>
+                                    <strong>Cardiac Conditions:</strong>
+                                    <ul style="margin-left: 15px; margin-top: 8px;">
+                                        <li><span class="severity-indicator severity-medium"></span>Unstable angina</li>
+                                        <li><span class="severity-indicator severity-medium"></span>Recent myocardial infarction (&lt;3 months)</li>
+                                        <li><span class="severity-indicator severity-low"></span>Congestive heart failure (stable)</li>
+                                        <li><span class="severity-indicator severity-low"></span>Hypertension (well-controlled)</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contraindication-section relative-contraindications">
+                        <h5>NEUROLOGICAL & PSYCHIATRIC CONDITIONS</h5>
+                        <div class="contraindication-list">
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
+                                <div>
+                                    <strong>Seizure Disorders:</strong>
+                                    <ul style="margin-left: 15px; margin-top: 8px;">
+                                        <li><span class="severity-indicator severity-medium"></span>Photosensitive epilepsy</li>
+                                        <li><span class="severity-indicator severity-low"></span>Controlled epilepsy</li>
+                                        <li><span class="severity-indicator severity-medium"></span>Recent seizure activity (&lt;6 months)</li>
+                                        <li><span class="severity-indicator severity-medium"></span>Medication non-compliance</li>
+                                    </ul>
+                                </div>
+                                
+                                <div>
+                                    <strong>Neurodegenerative Diseases:</strong>
+                                    <ul style="margin-left: 15px; margin-top: 8px;">
+                                        <li><span class="severity-indicator severity-low"></span>Parkinson's disease</li>
+                                        <li><span class="severity-indicator severity-low"></span>Multiple sclerosis</li>
+                                        <li><span class="severity-indicator severity-low"></span>Alzheimer's disease</li>
+                                        <li><span class="severity-indicator severity-medium"></span>Myasthenia gravis</li>
+                                    </ul>
+                                </div>
+                                
+                                <div>
+                                    <strong>Psychiatric Conditions:</strong>
+                                    <ul style="margin-left: 15px; margin-top: 8px;">
+                                        <li><span class="severity-indicator severity-medium"></span>Active psychosis</li>
+                                        <li><span class="severity-indicator severity-low"></span>Severe anxiety disorders</li>
+                                        <li><span class="severity-indicator severity-low"></span>Body dysmorphic disorder</li>
+                                        <li><span class="severity-indicator severity-medium"></span>Trichotillomania/dermatillomania</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contraindication-section relative-contraindications">
+                        <h5>RESPIRATORY CONDITIONS</h5>
+                        <div class="contraindication-list">
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
+                                <div>
+                                    <strong>Chronic Respiratory Diseases:</strong>
+                                    <ul style="margin-left: 15px; margin-top: 8px;">
+                                        <li><span class="severity-indicator severity-medium"></span>Severe COPD</li>
+                                        <li><span class="severity-indicator severity-medium"></span>Severe asthma (uncontrolled)</li>
+                                        <li><span class="severity-indicator severity-medium"></span>Pulmonary fibrosis</li>
+                                        <li><span class="severity-indicator severity-low"></span>Well-controlled asthma</li>
+                                    </ul>
+                                </div>
+                                
+                                <div>
+                                    <strong>Active Respiratory Conditions:</strong>
+                                    <ul style="margin-left: 15px; margin-top: 8px;">
+                                        <li><span class="severity-indicator severity-medium"></span>Active respiratory infection</li>
+                                        <li><span class="severity-indicator severity-medium"></span>Recent pneumonia (&lt;1 month)</li>
+                                        <li><span class="severity-indicator severity-low"></span>Chronic cough</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contraindication-section relative-contraindications">
+                        <h5>RENAL & HEPATIC CONDITIONS</h5>
+                        <div class="contraindication-list">
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
+                                <div>
+                                    <strong>Kidney Disease:</strong>
+                                    <ul style="margin-left: 15px; margin-top: 8px;">
+                                        <li><span class="severity-indicator severity-medium"></span>Chronic kidney disease (Stage 4-5)</li>
+                                        <li><span class="severity-indicator severity-medium"></span>Dialysis patients</li>
+                                        <li><span class="severity-indicator severity-high"></span>Kidney transplant recipients</li>
+                                        <li><span class="severity-indicator severity-low"></span>Mild-moderate CKD (Stage 2-3)</li>
+                                    </ul>
+                                </div>
+                                
+                                <div>
+                                    <strong>Liver Disease:</strong>
+                                    <ul style="margin-left: 15px; margin-top: 8px;">
+                                        <li><span class="severity-indicator severity-high"></span>Severe liver cirrhosis</li>
+                                        <li><span class="severity-indicator severity-high"></span>Active hepatitis (A, B, C)</li>
+                                        <li><span class="severity-indicator severity-high"></span>Liver transplant recipients</li>
+                                        <li><span class="severity-indicator severity-medium"></span>Moderate hepatic impairment</li>
+                                        <li><span class="severity-indicator severity-low"></span>Gilbert's syndrome</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contraindication-section cautions">
+                        <h5>PIGMENTARY & GENETIC DISORDERS</h5>
+                        <div class="contraindication-list">
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
+                                <div>
+                                    <strong>Pigmentation Disorders:</strong>
+                                    <ul style="margin-left: 15px; margin-top: 8px;">
+                                        <li><span class="severity-indicator severity-medium"></span>Vitiligo</li>
+                                        <li><span class="severity-indicator severity-medium"></span>Melasma/chloasma</li>
+                                        <li><span class="severity-indicator severity-low"></span>Post-inflammatory hyperpigmentation</li>
+                                        <li><span class="severity-indicator severity-low"></span>Café-au-lait spots</li>
+                                        <li><span class="severity-indicator severity-medium"></span>Albinism</li>
+                                    </ul>
+                                </div>
+                                
+                                <div>
+                                    <strong>Genetic Photosensitivity Syndromes:</strong>
+                                    <ul style="margin-left: 15px; margin-top: 8px;">
+                                        <li><span class="severity-indicator severity-high"></span>Xeroderma pigmentosum</li>
+                                        <li><span class="severity-indicator severity-high"></span>Porphyria cutanea tarda</li>
+                                        <li><span class="severity-indicator severity-medium"></span>Polymorphic light eruption</li>
+                                        <li><span class="severity-indicator severity-medium"></span>Solar urticaria</li>
+                                        <li><span class="severity-indicator severity-medium"></span>Hydroa vacciniforme</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contraindication-section cautions">
+                        <h5>SPECIAL POPULATIONS & SITUATIONS</h5>
+                        <div class="contraindication-list">
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
+                                <div>
+                                    <strong>Age-Related Considerations:</strong>
+                                    <ul style="margin-left: 15px; margin-top: 8px;">
+                                        <li><span class="severity-indicator severity-medium"></span>Age &lt;16 years</li>
+                                        <li><span class="severity-indicator severity-low"></span>Age &gt;75 years</li>
+                                        <li><span class="severity-indicator severity-low"></span>Frailty syndrome</li>
+                                        <li><span class="severity-indicator severity-low"></span>Multiple comorbidities</li>
+                                    </ul>
+                                </div>
+                                
+                                <div>
+                                    <strong>Recent Procedures:</strong>
+                                    <ul style="margin-left: 15px; margin-top: 8px;">
+                                        <li><span class="severity-indicator severity-high"></span>Recent surgery (&lt;6 weeks) in treatment area</li>
+                                        <li><span class="severity-indicator severity-medium"></span>Recent cosmetic procedures</li>
+                                        <li><span class="severity-indicator severity-medium"></span>Recent radiation therapy</li>
+                                        <li><span class="severity-indicator severity-low"></span>Recent vaccination (local reaction)</li>
+                                    </ul>
+                                </div>
+                                
+                                <div>
+                                    <strong>Lifestyle Factors:</strong>
+                                    <ul style="margin-left: 15px; margin-top: 8px;">
+                                        <li><span class="severity-indicator severity-low"></span>Heavy smoking (&gt;20/day)</li>
+                                        <li><span class="severity-indicator severity-low"></span>Excessive alcohol consumption</li>
+                                        <li><span class="severity-indicator severity-low"></span>Poor nutritional status</li>
+                                        <li><span class="severity-indicator severity-low"></span>High stress levels</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="laser-specs">
+                        <h5>Medical Assessment Protocol</h5>
+                        <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                            <ol style="margin-left: 20px; line-height: 1.8;">
+                                <li><strong>Comprehensive Medical History:</strong> Review past and current medical conditions, surgeries, hospitalizations</li>
+                                <li><strong>Systems Review:</strong> Cardiovascular, respiratory, neurological, endocrine, hematological assessment</li>
+                                <li><strong>Family History:</strong> Genetic conditions, keloid formation, autoimmune diseases</li>
+                                <li><strong>Specialist Consultations:</strong> Obtain clearance for complex medical conditions</li>
+                                <li><strong>Laboratory Results:</strong> Review recent blood work, imaging studies if relevant</li>
+                                <li><strong>Risk Stratification:</strong> Categorize overall medical risk profile</li>
+                                <li><strong>Documentation:</strong> Detailed record of all conditions assessed</li>
+                                <li><strong>Monitoring Plan:</strong> Establish appropriate follow-up protocols</li>
+                            </ol>
+                        </div>
+                    </div>
+
                     <div class="clinical-note">
                         <div class="clinical-note-title">Clinical Assessment Guidelines:</div>
                         Perform systematic review of all body systems. When multiple conditions are present, consider cumulative risk. Always obtain specialist clearance for complex medical conditions before proceeding with treatment. Document decision-making rationale for all high-risk cases.
@@ -621,7 +935,295 @@
                                     </ul>
                                     <small style="color: #dc3545;"><strong>Discontinue:</strong> 1-2 weeks before treatment</small>
                                 </div>
+                                
+                                <div>
+                                    <strong>Sulfonamide Antibiotics:</strong>
+                                    <ul style="margin-left: 15px; margin-top: 8px;">
+                                        <li><span class="severity-indicator severity-high"></span>Sulfamethoxazole-trimethoprim (Bactrim, Septra)</li>
+                                        <li><span class="severity-indicator severity-high"></span>Sulfisoxazole</li>
+                                        <li><span class="severity-indicator severity-medium"></span>Sulfadiazine</li>
+                                        <li><span class="severity-indicator severity-medium"></span>Silver sulfadiazine (topical)</li>
+                                    </ul>
+                                    <small style="color: #dc3545;"><strong>Discontinue:</strong> 1-2 weeks before treatment</small>
+                                </div>
                             </div>
+                        </div>
+                    </div>
+
+                    <div class="contraindication-section absolute-contraindications">
+                        <h5>CARDIOVASCULAR & DIURETIC MEDICATIONS</h5>
+                        <div class="contraindication-list">
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
+                                <div>
+                                    <strong>Thiazide Diuretics:</strong>
+                                    <ul style="margin-left: 15px; margin-top: 8px;">
+                                        <li><span class="severity-indicator severity-high"></span>Hydrochlorothiazide (HCTZ)</li>
+                                        <li><span class="severity-indicator severity-high"></span>Chlorthalidone</li>
+                                        <li><span class="severity-indicator severity-high"></span>Indapamide</li>
+                                        <li><span class="severity-indicator severity-medium"></span>Bendroflumethiazide</li>
+                                    </ul>
+                                    <small style="color: #fd7e14;"><strong>Caution:</strong> Consult prescriber before modification</small>
+                                </div>
+                                
+                                <div>
+                                    <strong>Loop Diuretics:</strong>
+                                    <ul style="margin-left: 15px; margin-top: 8px;">
+                                        <li><span class="severity-indicator severity-medium"></span>Furosemide (Lasix)</li>
+                                        <li><span class="severity-indicator severity-medium"></span>Bumetanide</li>
+                                        <li><span class="severity-indicator severity-low"></span>Torsemide</li>
+                                    </ul>
+                                </div>
+                                
+                                <div>
+                                    <strong>ACE Inhibitors (mild risk):</strong>
+                                    <ul style="margin-left: 15px; margin-top: 8px;">
+                                        <li><span class="severity-indicator severity-low"></span>Enalapril</li>
+                                        <li><span class="severity-indicator severity-low"></span>Captopril</li>
+                                        <li><span class="severity-indicator severity-low"></span>Lisinopril</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contraindication-section relative-contraindications">
+                        <h5>ANTI-INFLAMMATORY & ANALGESIC MEDICATIONS</h5>
+                        <div class="contraindication-list">
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
+                                <div>
+                                    <strong>NSAIDs (Non-steroidal):</strong>
+                                    <ul style="margin-left: 15px; margin-top: 8px;">
+                                        <li><span class="severity-indicator severity-medium"></span>Ibuprofen (Advil, Motrin)</li>
+                                        <li><span class="severity-indicator severity-medium"></span>Naproxen (Aleve)</li>
+                                        <li><span class="severity-indicator severity-medium"></span>Diclofenac (Voltaren)</li>
+                                        <li><span class="severity-indicator severity-medium"></span>Celecoxib (Celebrex)</li>
+                                        <li><span class="severity-indicator severity-medium"></span>Meloxicam</li>
+                                        <li><span class="severity-indicator severity-high"></span>Piroxicam</li>
+                                        <li><span class="severity-indicator severity-medium"></span>Ketoprofen</li>
+                                    </ul>
+                                    <small style="color: #fd7e14;"><strong>Timing:</strong> Consider stopping 48-72 hours pre-treatment</small>
+                                </div>
+                                
+                                <div>
+                                    <strong>Topical NSAIDs:</strong>
+                                    <ul style="margin-left: 15px; margin-top: 8px;">
+                                        <li><span class="severity-indicator severity-medium"></span>Diclofenac gel</li>
+                                        <li><span class="severity-indicator severity-medium"></span>Ketoprofen gel</li>
+                                        <li><span class="severity-indicator severity-low"></span>Ibuprofen gel</li>
+                                    </ul>
+                                    <small style="color: #fd7e14;"><strong>Action:</strong> Discontinue application to treatment area</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contraindication-section absolute-contraindications">
+                        <h5>DERMATOLOGICAL & RETINOID MEDICATIONS</h5>
+                        <div class="contraindication-list">
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
+                                <div>
+                                    <strong>Systemic Retinoids:</strong>
+                                    <ul style="margin-left: 15px; margin-top: 8px;">
+                                        <li><span class="severity-indicator severity-high"></span>Isotretinoin (Roaccutane, Accutane)</li>
+                                        <li><span class="severity-indicator severity-high"></span>Acitretin</li>
+                                        <li><span class="severity-indicator severity-medium"></span>Alitretinoin</li>
+                                    </ul>
+                                    <small style="color: #dc3545;"><strong>Discontinue:</strong> 6-12 months before treatment</small>
+                                </div>
+                                
+                                <div>
+                                    <strong>Topical Retinoids:</strong>
+                                    <ul style="margin-left: 15px; margin-top: 8px;">
+                                        <li><span class="severity-indicator severity-medium"></span>Tretinoin (Retin-A)</li>
+                                        <li><span class="severity-indicator severity-medium"></span>Adapalene (Differin)</li>
+                                        <li><span class="severity-indicator severity-medium"></span>Tazarotene</li>
+                                        <li><span class="severity-indicator severity-low"></span>Retinol products</li>
+                                    </ul>
+                                    <small style="color: #fd7e14;"><strong>Discontinue:</strong> 2-4 weeks in treatment area</small>
+                                </div>
+                                
+                                <div>
+                                    <strong>Alpha/Beta Hydroxy Acids:</strong>
+                                    <ul style="margin-left: 15px; margin-top: 8px;">
+                                        <li><span class="severity-indicator severity-medium"></span>Glycolic acid</li>
+                                        <li><span class="severity-indicator severity-medium"></span>Salicylic acid</li>
+                                        <li><span class="severity-indicator severity-low"></span>Lactic acid</li>
+                                        <li><span class="severity-indicator severity-medium"></span>Chemical peels</li>
+                                    </ul>
+                                    <small style="color: #fd7e14;"><strong>Timing:</strong> Stop 1-2 weeks before treatment</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contraindication-section relative-contraindications">
+                        <h5>PSYCHIATRIC & NEUROLOGICAL MEDICATIONS</h5>
+                        <div class="contraindication-list">
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
+                                <div>
+                                    <strong>Antipsychotics:</strong>
+                                    <ul style="margin-left: 15px; margin-top: 8px;">
+                                        <li><span class="severity-indicator severity-high"></span>Chlorpromazine</li>
+                                        <li><span class="severity-indicator severity-high"></span>Haloperidol</li>
+                                        <li><span class="severity-indicator severity-medium"></span>Olanzapine</li>
+                                        <li><span class="severity-indicator severity-medium"></span>Risperidone</li>
+                                        <li><span class="severity-indicator severity-low"></span>Aripiprazole</li>
+                                    </ul>
+                                </div>
+                                
+                                <div>
+                                    <strong>Tricyclic Antidepressants:</strong>
+                                    <ul style="margin-left: 15px; margin-top: 8px;">
+                                        <li><span class="severity-indicator severity-medium"></span>Amitriptyline</li>
+                                        <li><span class="severity-indicator severity-medium"></span>Imipramine</li>
+                                        <li><span class="severity-indicator severity-low"></span>Nortriptyline</li>
+                                        <li><span class="severity-indicator severity-low"></span>Desipramine</li>
+                                    </ul>
+                                </div>
+                                
+                                <div>
+                                    <strong>Anti-epileptics:</strong>
+                                    <ul style="margin-left: 15px; margin-top: 8px;">
+                                        <li><span class="severity-indicator severity-medium"></span>Carbamazepine</li>
+                                        <li><span class="severity-indicator severity-low"></span>Phenytoin</li>
+                                        <li><span class="severity-indicator severity-low"></span>Lamotrigine</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contraindication-section cautions">
+                        <h5>ANTICOAGULANT & BLEEDING RISK MEDICATIONS</h5>
+                        <div class="contraindication-list">
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
+                                <div>
+                                    <strong>Anticoagulants:</strong>
+                                    <ul style="margin-left: 15px; margin-top: 8px;">
+                                        <li><span class="severity-indicator severity-high"></span>Warfarin</li>
+                                        <li><span class="severity-indicator severity-medium"></span>Rivaroxaban (Xarelto)</li>
+                                        <li><span class="severity-indicator severity-medium"></span>Apixaban (Eliquis)</li>
+                                        <li><span class="severity-indicator severity-medium"></span>Dabigatran (Pradaxa)</li>
+                                        <li><span class="severity-indicator severity-medium"></span>Enoxaparin (Clexane)</li>
+                                    </ul>
+                                    <small style="color: #fd7e14;"><strong>Action:</strong> Assess bleeding risk vs thrombotic risk</small>
+                                </div>
+                                
+                                <div>
+                                    <strong>Antiplatelet Agents:</strong>
+                                    <ul style="margin-left: 15px; margin-top: 8px;">
+                                        <li><span class="severity-indicator severity-low"></span>Aspirin (low dose)</li>
+                                        <li><span class="severity-indicator severity-medium"></span>Clopidogrel (Plavix)</li>
+                                        <li><span class="severity-indicator severity-medium"></span>Dipyridamole</li>
+                                        <li><span class="severity-indicator severity-medium"></span>Ticagrelor</li>
+                                    </ul>
+                                </div>
+                                
+                                <div>
+                                    <strong>Natural Anticoagulants:</strong>
+                                    <ul style="margin-left: 15px; margin-top: 8px;">
+                                        <li><span class="severity-indicator severity-low"></span>Fish oil supplements</li>
+                                        <li><span class="severity-indicator severity-low"></span>Garlic supplements</li>
+                                        <li><span class="severity-indicator severity-low"></span>Ginkgo biloba</li>
+                                        <li><span class="severity-indicator severity-low"></span>Turmeric supplements</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contraindication-section cautions">
+                        <h5>HERBAL SUPPLEMENTS & NATURAL PRODUCTS</h5>
+                        <div class="contraindication-list">
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
+                                <div>
+                                    <strong>Photosensitizing Herbs:</strong>
+                                    <ul style="margin-left: 15px; margin-top: 8px;">
+                                        <li><span class="severity-indicator severity-high"></span>St John's Wort (Hypericum)</li>
+                                        <li><span class="severity-indicator severity-medium"></span>Dong Quai</li>
+                                        <li><span class="severity-indicator severity-medium"></span>Lime/Bergamot oil</li>
+                                        <li><span class="severity-indicator severity-low"></span>Fennel supplements</li>
+                                        <li><span class="severity-indicator severity-low"></span>Parsley seed oil</li>
+                                    </ul>
+                                    <small style="color: #fd7e14;"><strong>Discontinue:</strong> 2-3 weeks before treatment</small>
+                                </div>
+                                
+                                <div>
+                                    <strong>Immune System Modulators:</strong>
+                                    <ul style="margin-left: 15px; margin-top: 8px;">
+                                        <li><span class="severity-indicator severity-medium"></span>Echinacea</li>
+                                        <li><span class="severity-indicator severity-low"></span>Goldenseal</li>
+                                        <li><span class="severity-indicator severity-low"></span>Astragalus</li>
+                                        <li><span class="severity-indicator severity-low"></span>Medicinal mushrooms</li>
+                                    </ul>
+                                </div>
+                                
+                                <div>
+                                    <strong>Other Considerations:</strong>
+                                    <ul style="margin-left: 15px; margin-top: 8px;">
+                                        <li><span class="severity-indicator severity-low"></span>High-dose Vitamin E</li>
+                                        <li><span class="severity-indicator severity-low"></span>Beta-carotene supplements</li>
+                                        <li><span class="severity-indicator severity-low"></span>Selenium (high doses)</li>
+                                        <li><span class="severity-indicator severity-low"></span>Green tea extract (concentrated)</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contraindication-section relative-contraindications">
+                        <h5>ONCOLOGY & IMMUNOSUPPRESSIVE MEDICATIONS</h5>
+                        <div class="contraindication-list">
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
+                                <div>
+                                    <strong>Chemotherapy Agents:</strong>
+                                    <ul style="margin-left: 15px; margin-top: 8px;">
+                                        <li><span class="severity-indicator severity-high"></span>5-Fluorouracil</li>
+                                        <li><span class="severity-indicator severity-high"></span>Methotrexate</li>
+                                        <li><span class="severity-indicator severity-high"></span>Doxorubicin</li>
+                                        <li><span class="severity-indicator severity-high"></span>Cyclophosphamide</li>
+                                        <li><span class="severity-indicator severity-high"></span>Paclitaxel</li>
+                                    </ul>
+                                    <small style="color: #dc3545;"><strong>Action:</strong> Oncology clearance required</small>
+                                </div>
+                                
+                                <div>
+                                    <strong>Immunosuppressants:</strong>
+                                    <ul style="margin-left: 15px; margin-top: 8px;">
+                                        <li><span class="severity-indicator severity-high"></span>Cyclosporine</li>
+                                        <li><span class="severity-indicator severity-high"></span>Tacrolimus</li>
+                                        <li><span class="severity-indicator severity-high"></span>Mycophenolate</li>
+                                        <li><span class="severity-indicator severity-high"></span>Azathioprine</li>
+                                        <li><span class="severity-indicator severity-medium"></span>Prednisolone (high dose)</li>
+                                    </ul>
+                                </div>
+                                
+                                <div>
+                                    <strong>Biologics:</strong>
+                                    <ul style="margin-left: 15px; margin-top: 8px;">
+                                        <li><span class="severity-indicator severity-high"></span>Adalimumab (Humira)</li>
+                                        <li><span class="severity-indicator severity-high"></span>Etanercept (Enbrel)</li>
+                                        <li><span class="severity-indicator severity-high"></span>Infliximab (Remicade)</li>
+                                        <li><span class="severity-indicator severity-medium"></span>Rituximab</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="laser-specs">
+                        <h5>Medication Review Protocol</h5>
+                        <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                            <ol style="margin-left: 20px; line-height: 1.8;">
+                                <li><strong>Comprehensive History:</strong> Review all prescription medications, OTC drugs, supplements, and herbal remedies</li>
+                                <li><strong>Timing Assessment:</strong> Determine when medications were last taken and duration of use</li>
+                                <li><strong>Risk Stratification:</strong> Categorize each medication by photosensitivity and bleeding risk</li>
+                                <li><strong>Prescriber Consultation:</strong> Contact prescribing physician for high-risk medications</li>
+                                <li><strong>Discontinuation Planning:</strong> Develop safe withdrawal timelines where appropriate</li>
+                                <li><strong>Alternative Assessment:</strong> Consider safer alternatives during treatment period</li>
+                                <li><strong>Documentation:</strong> Record all medications, risks assessed, and actions taken</li>
+                                <li><strong>Follow-up:</strong> Schedule medication review before each subsequent session</li>
+                            </ol>
                         </div>
                     </div>
 
@@ -732,3 +1334,140 @@
                             <li>Emergency contact information provided</li>
                             <li>Follow-up appointment scheduled</li>
                         </ul>
+                    </div>
+
+                    <div class="clinical-note">
+                        <div class="clinical-note-title">Documentation Requirements:</div>
+                        Maintain detailed records including medical history, assessment findings, treatment parameters, client consent, and any adverse reactions. Ensure all documentation meets regulatory standards.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="legend">
+            <h3>Risk Classification & Assessment Legend</h3>
+            <div class="legend-grid">
+                <div class="legend-item">
+                    <span class="severity-indicator severity-high"></span>
+                    <span><strong>High Risk:</strong> Absolute contraindication - Do not treat</span>
+                </div>
+                <div class="legend-item">
+                    <span class="severity-indicator severity-medium"></span>
+                    <span><strong>Medium Risk:</strong> Relative contraindication - Specialist consultation required</span>
+                </div>
+                <div class="legend-item">
+                    <span class="severity-indicator severity-low"></span>
+                    <span><strong>Low Risk:</strong> Caution advised - Monitor closely</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="emergency-contact">
+            <h3>Emergency Contacts</h3>
+            <div class="emergency-number">NHS 111</div>
+            <p>For urgent medical advice when it's not life-threatening</p>
+            <br>
+            <div class="emergency-number">999</div>
+            <p>For life-threatening emergencies or severe adverse reactions</p>
+            <br>
+            <p><strong>Report adverse incidents to MHRA Yellow Card Scheme</strong></p>
+        </div>
+    </div>
+
+    <script>
+        // Filter by category
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const assessmentSections = document.querySelectorAll('.assessment-section');
+        const categoryList = document.querySelectorAll('.category-list li');
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                this.classList.add('active');
+                
+                const category = this.dataset.category;
+                
+                assessmentSections.forEach(section => {
+                    if (category === 'all' || section.classList.contains(category)) {
+                        section.style.display = 'block';
+                    } else {
+                        section.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Sidebar navigation
+        categoryList.forEach(item => {
+            item.addEventListener('click', function() {
+                const sectionName = this.dataset.section;
+                
+                // Hide all sections
+                assessmentSections.forEach(section => {
+                    section.classList.remove('active');
+                    section.style.display = 'none';
+                });
+                
+                // Show selected section
+                const selectedSection = document.querySelector(`.assessment-section[data-section="${sectionName}"]`);
+                
+                if (selectedSection) {
+                    selectedSection.classList.add('active');
+                    selectedSection.style.display = 'block';
+                } else {
+                    assessmentSections[0].classList.add('active');
+                    assessmentSections[0].style.display = 'block';
+                }
+                
+                // Reset filters
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                filterButtons[0].classList.add('active');
+                
+                // Highlight selected category in sidebar
+                categoryList.forEach(li => li.style.backgroundColor = '');
+                this.style.backgroundColor = '#e7f3ff';
+            });
+        });
+
+        // Initialize - show first section by default
+        assessmentSections[0].style.display = 'block';
+        
+        // Add hover effects for interactive elements
+        document.querySelectorAll('.contraindication-list li').forEach(item => {
+            item.addEventListener('mouseenter', function() {
+                this.style.backgroundColor = '#f8f9fa';
+                this.style.paddingLeft = '10px';
+                this.style.transition = 'all 0.2s ease';
+            });
+            
+            item.addEventListener('mouseleave', function() {
+                this.style.backgroundColor = '';
+                this.style.paddingLeft = '';
+            });
+        });
+
+        // Add accessibility features
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.setAttribute('role', 'button');
+            btn.setAttribute('tabindex', '0');
+            
+            btn.addEventListener('keydown', function(e) {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    this.click();
+                }
+            });
+        });
+
+        // Add tooltips for severity indicators
+        document.querySelectorAll('.severity-indicator').forEach(indicator => {
+            const severity = indicator.classList.contains('severity-high') ? 'High Risk' :
+                           indicator.classList.contains('severity-medium') ? 'Medium Risk' : 'Low Risk';
+            indicator.setAttribute('title', severity);
+            indicator.style.cursor = 'help';
+        });
+
+        console.log('Laser Tattoo Removal Contraindications Guide initialized');
+    </script>
+</body>
+</html>
