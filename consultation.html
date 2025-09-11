@@ -16,7 +16,7 @@
             font-size: 9pt;
             line-height: 1.2;
             margin: 0.3in;
-            color: #333;
+            color: #0066cc; /* Blue instead of black */
             background: #fff;
         }
         
@@ -25,8 +25,8 @@
             font-size: 14pt;
             font-weight: bold;
             margin-bottom: 8px;
-            color: #2c5aa0;
-            border-bottom: 2px solid #2c5aa0;
+            color: #0066cc; /* Blue instead of black */
+            border-bottom: 1px solid #0066cc; /* Blue border */
             padding-bottom: 4px;
         }
         
@@ -34,15 +34,13 @@
             text-align: center;
             font-size: 8pt;
             margin-bottom: 12px;
-            background: #e3f2fd;
-            padding: 4px;
+            padding: 2px;
             border-radius: 3px;
-            color: #1565c0;
         }
         
         .section {
             margin-bottom: 8px;
-            border: 1px solid #e0e0e0;
+            border: 1px solid #0066cc; /* Blue border */
             border-radius: 4px;
             padding: 6px;
             background: #fff;
@@ -51,22 +49,22 @@
         .section-title {
             font-weight: bold;
             font-size: 9pt;
-            color: #d32f2f;
-            background: #ffebee;
+            color: #0066cc; /* Blue instead of black */
+            background: #f0f8ff; /* Light blue background */
             padding: 3px 6px;
             margin: -6px -6px 6px -6px;
             border-radius: 4px 4px 0 0;
-            border-bottom: 1px solid #e57373;
+            border-bottom: 1px solid #0066cc; /* Blue border */
         }
         
         .contraindication-title {
             font-weight: bold;
-            color: #d32f2f;
-            background: #ffcdd2;
+            color: #cc0000; /* Red for warning */
+            background: #fff5f5; /* Light red background */
             padding: 3px 6px;
             margin: -6px -6px 6px -6px;
             border-radius: 4px 4px 0 0;
-            border-bottom: 2px solid #d32f2f;
+            border-bottom: 1px solid #cc0000; /* Red border */
             font-size: 9pt;
         }
         
@@ -85,12 +83,12 @@
             display: block;
             font-weight: 600;
             margin-bottom: 2px;
-            color: #424242;
+            color: #0066cc; /* Blue instead of black */
             font-size: 8pt;
         }
         
         .blank-line {
-            border-bottom: 1px solid #333;
+            border-bottom: 1px solid #0066cc; /* Blue border */
             display: inline-block;
             min-height: 12px;
             width: 100%;
@@ -124,12 +122,13 @@
         }
         
         .checkbox-square {
-            border: 1px solid #333;
+            border: 1px solid #0066cc; /* Blue border */
             width: 10px;
             height: 10px;
             display: inline-block;
             margin-right: 3px;
             vertical-align: middle;
+            background: #fff;
         }
         
         .inline-checkboxes {
@@ -165,10 +164,10 @@
             gap: 6px;
         }
         
-        .four-column {
+        .medical-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr 1fr 1fr;
-            gap: 4px;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 6px;
         }
         
         .tattoo-section {
@@ -179,15 +178,15 @@
         }
         
         .tattoo-card {
-            border: 1px solid #81c784;
+            border: 1px solid #0066cc; /* Blue border */
             border-radius: 3px;
             padding: 4px;
-            background: #f1f8e9;
+            background: #f0f8ff; /* Light blue background */
         }
         
         .tattoo-card h4 {
             margin: 0 0 4px 0;
-            color: #388e3c;
+            color: #0066cc; /* Blue instead of black */
             font-size: 8pt;
         }
         
@@ -203,10 +202,11 @@
         }
         
         .text-area {
-            border: 1px solid #333;
+            border: 1px solid #0066cc; /* Blue border */
             width: 100%;
             min-height: 25px;
             margin-bottom: 2px;
+            background: #fff;
         }
         
         .large-text-area {
@@ -218,8 +218,8 @@
         }
         
         .consent-checklist {
-            background: #fff8e1;
-            border: 1px solid #ffb74d;
+            background: #f0f8ff; /* Light blue background */
+            border: 1px solid #0066cc; /* Blue border */
             border-radius: 3px;
             padding: 6px;
             margin: 6px 0;
@@ -234,15 +234,15 @@
         }
         
         .signature-area {
-            border: 1px solid #2c5aa0;
-            background: #e3f2fd;
+            border: 1px solid #0066cc; /* Blue border */
+            background: #f0f8ff; /* Light blue background */
             border-radius: 3px;
             padding: 6px;
             margin-top: 6px;
         }
         
         .signature-box {
-            border: 1px solid #666;
+            border: 1px solid #0066cc; /* Blue border */
             height: 25px;
             margin: 3px 0;
             background: #fff;
@@ -250,14 +250,14 @@
         }
         
         .highlight {
-            background: #fff3e0;
+            background: #f0f8ff; /* Light blue background */
             padding: 3px;
             border-radius: 2px;
-            border-left: 2px solid #ff9800;
+            border-left: 1px solid #0066cc; /* Blue border */
             margin: 3px 0;
             font-size: 8pt;
             font-weight: bold;
-            color: #e65100;
+            color: #0066cc; /* Blue instead of black */
         }
         
         .mini-section {
@@ -274,6 +274,32 @@
         
         .page-2 {
             margin-top: 0;
+        }
+        
+        .skin-type-section {
+            background: #f0f8ff; /* Light blue background */
+            border: 1px solid #0066cc; /* Blue border */
+            border-radius: 3px;
+            padding: 4px;
+            margin-top: 4px;
+        }
+        
+        .skin-type-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 3px;
+            margin-top: 2px;
+        }
+        
+        .skin-type-item {
+            font-size: 7pt;
+            display: flex;
+            align-items: center;
+        }
+        
+        .warning-symbol {
+            font-weight: bold;
+            color: #cc0000; /* Red for warning symbol */
         }
     </style>
 </head>
@@ -335,7 +361,7 @@
 
         <!-- ABSOLUTE CONTRAINDICATIONS -->
         <div class="section mini-section">
-            <div class="contraindication-title">⚠️ ABSOLUTE CONTRAINDICATIONS</div>
+            <div class="contraindication-title"><span class="warning-symbol">!</span> ABSOLUTE CONTRAINDICATIONS</div>
             <div class="checkbox-grid">
                 <div class="checkbox-item"><span class="checkbox-square"></span> Pregnancy/Nursing</div>
                 <div class="checkbox-item"><span class="checkbox-square"></span> Skin cancer in area</div>
@@ -351,7 +377,7 @@
         <!-- MEDICAL HISTORY -->
         <div class="section mini-section">
             <div class="section-title">Medical History & Relative Contraindications</div>
-            <div class="four-column ultra-compact">
+            <div class="medical-grid ultra-compact">
                 <div>
                     <div class="highlight">Systemic</div>
                     <div class="checkbox-item"><span class="checkbox-square"></span> Diabetes</div>
@@ -365,7 +391,7 @@
                 </div>
                 
                 <div>
-                    <div class="highlight">Skin</div>
+                    <div class="highlight">Skin Conditions</div>
                     <div class="checkbox-item"><span class="checkbox-square"></span> Keloid scarring</div>
                     <div class="checkbox-item"><span class="checkbox-square"></span> Vitiligo</div>
                     <div class="checkbox-item"><span class="checkbox-square"></span> Psoriasis</div>
@@ -377,7 +403,7 @@
                 </div>
                 
                 <div>
-                    <div class="highlight">Physical</div>
+                    <div class="highlight">Physical/Other</div>
                     <div class="checkbox-item"><span class="checkbox-square"></span> Pacemaker</div>
                     <div class="checkbox-item"><span class="checkbox-square"></span> Metal implants</div>
                     <div class="checkbox-item"><span class="checkbox-square"></span> Over lymph nodes</div>
@@ -386,24 +412,21 @@
                     <div class="checkbox-item"><span class="checkbox-square"></span> Recent laser</div>
                     <div class="checkbox-item"><span class="checkbox-square"></span> Under 18</div>
                     <div class="checkbox-item"><span class="checkbox-square"></span> New tattoo (&lt;3mo)</div>
-                </div>
-                
-                <div>
-                    <div class="highlight">Infectious</div>
                     <div class="checkbox-item"><span class="checkbox-square"></span> HIV/AIDS</div>
                     <div class="checkbox-item"><span class="checkbox-square"></span> Hepatitis B/C</div>
-                    <div class="checkbox-item"><span class="checkbox-square"></span> Tuberculosis</div>
                     <div class="checkbox-item"><span class="checkbox-square"></span> MRSA history</div>
-                    
-                    <div class="highlight" style="margin-top: 6px;">Skin Type</div>
-                    <div class="compact-grid">
-                        <label style="font-size: 7pt;"><span class="checkbox-square"></span> I</label>
-                        <label style="font-size: 7pt;"><span class="checkbox-square"></span> II</label>
-                        <label style="font-size: 7pt;"><span class="checkbox-square"></span> III</label>
-                        <label style="font-size: 7pt;"><span class="checkbox-square"></span> IV</label>
-                        <label style="font-size: 7pt;"><span class="checkbox-square"></span> V</label>
-                        <label style="font-size: 7pt;"><span class="checkbox-square"></span> VI</label>
-                    </div>
+                </div>
+            </div>
+            
+            <div class="skin-type-section">
+                <div class="highlight" style="margin: 0 0 3px 0; font-size: 8pt;">Fitzpatrick Skin Type</div>
+                <div class="skin-type-grid">
+                    <div class="skin-type-item"><span class="checkbox-square"></span> I - Always burns, never tans</div>
+                    <div class="skin-type-item"><span class="checkbox-square"></span> II - Usually burns, minimal tan</div>
+                    <div class="skin-type-item"><span class="checkbox-square"></span> III - Sometimes burns, gradual tan</div>
+                    <div class="skin-type-item"><span class="checkbox-square"></span> IV - Rarely burns, tans well</div>
+                    <div class="skin-type-item"><span class="checkbox-square"></span> V - Very rarely burns, tans easily</div>
+                    <div class="skin-type-item"><span class="checkbox-square"></span> VI - Never burns, deeply pigmented</div>
                 </div>
             </div>
         </div>
@@ -709,15 +732,4 @@
             
             <div class="form-row" style="margin-top: 8px;">
                 <div class="form-group">
-                    <label>Recommended Laser Settings:</label>
-                    <div class="text-area medium-text-area"></div>
-                </div>
-                <div class="form-group">
-                    <label>Treatment Plan:</label>
-                    <div class="text-area medium-text-area"></div>
-                </div>
-            </div>
-        </div>
-    </div>
-</body>
-</html>
+                    <label>
