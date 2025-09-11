@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laser Tattoo Removal Consultation Form</title>
+    <style>
+        @media print {
+            body { margin: 0.4in; }
+            .page-break { page-break-before: always; }
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            font-size: 10pt;
+            line-height: 1.3;
+            margin: 0.4in;
+            color: #333;
+            background: #fff;
+        }
+        
+        .header {
+            text-align: center;
+            font-size: 16pt;
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: #2c5aa0;
+            border-bottom: 2px solid #2c5aa0;
+            padding-bottom: 8px;
+        }
+        
+        .clinic-info {
+            text-align: center;
+            font-size: 9pt;
+            margin-bottom: 20px;
+            background: #f8f9fa;
+            padding: 8px;
+            border-radius: 4px;
+        }
+        
+        .section {
+            margin-bottom: 18px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            padding: 12px;
+            background: #fff;
+        }
+        
+        .section-title {
+            font-weight: bold;
+            font-size: 11pt;
+            color: #2c5aa0;
+            background: #f0f4f8;
+            padding: 6px 10px;
+            margin: -12px -12px 12px -12px;
+            border-radius: 6px 6px 0 0;
+            border-bottom: 2px solid #2c5aa0;
+        }
+        
+        .form-row {
+            display: flex;
+            margin-bottom: 12px;
+            gap: 15px;
+        }
+        
+        .form-group {
+            flex: 1;
+            margin-bottom: 10px;
+        }
+        
+        .form-group label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 4px;
+            color: #555;
+            font-size: 9pt;
+        }
+        
+        input[type="text"], input[type="date"], input[type="email"], input[type="tel"] {
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            padding: 6px 8px;
+            font-size: 9pt;
+            width: 100%;
+            box-sizing: border-box;
+            background: #fff;
+        }
+        
+        input[type="text"]:focus, input[type="date"]:focus, input[type="email"]:focus, input[type="tel"]:focus {
+            border-color: #2c5aa0;
+            outline: none;
+            box-shadow: 0 0 3px rgba(44, 90, 160, 0.3);
+        }
+        
+        .checkbox-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 4px;
+            margin-top: 6px;
+        }
+        
+        .checkbox-item {
+            display: flex;
+            align-items: center;
+            padding: 2px;
+            font-size: 9pt;
+        }
+        
+        input[type="checkbox"] {
+            margin-right: 6px;
+            transform: scale(1.1);
+        }
+        
+        .inline-checkboxes {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 6px;
+        }
+        
+        .inline-checkboxes label {
+            font-size: 9pt;
+            font-weight: normal;
+        }
+        
+        /* IMPROVED SKIN TYPE LAYOUT */
+        .skin-type-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 8px;
+            margin-top: 8px;
+            padding: 8px;
+            background: #f8f9fa;
+            border-radius: 4px;
+            border: 1px solid #e9ecef;
+        }
+        
+        .skin-type-item {
+            display: flex;
+            align-items: center;
+            padding: 6px 8px;
+            background: white;
+            border-radius: 3px;
+            border: 1px solid #dee2e6;
+            font-size: 9pt;
+        }
+        
+        .skin-type-item:hover {
+            background: #e3f2fd;
+            border-color: #2c5aa0;
+        }
+        
+        .skin-type-item input[type="checkbox"] {
+            margin-right: 8px;
+        }
+        
+        .skin-type-description {
+            font-size: 8pt;
+            color: #666;
+            font-style: italic;
+        }
+        
+        .compact-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 3px;
+            margin-top: 6px;
+        }
+        
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+        
+        .three-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 10px;
+        }
+        
+        .tattoo-cards {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-top: 12px;
+        }
+        
+        .tattoo-card {
+            border: 1px solid #e9ecef;
+            border-radius: 6px;
+            padding: 10px;
+            background: #f8f9fa;
+        }
+        
+        .tattoo-card h4 {
+            margin: 0 0 10px 0;
+            color: #2c5aa0;
+            font-size: 10pt;
+        }
+        
+        .color-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 3px;
+            margin-top: 6px;
+        }
+        
+        .color-grid label {
+            font-size: 8pt;
+        }
+        
+        textarea {
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            padding: 6px 8px;
+            font-size: 9pt;
+            width: 100%;
+            min-height: 40px;
+            resize: vertical;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        
+        textarea:focus {
+            border-color: #2c5aa0;
+            outline: none;
+            box-shadow: 0 0 3px rgba(44, 90, 160, 0.3);
+        }
+        
+        .consent-checklist {
+            background: #fff3cd;
+            border: 2px solid #ffc107;
+            border-radius: 6px;
+            padding: 12px;
+            margin: 12px 0;
+        }
+        
+        .consent-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 6px;
+            padding: 2px;
+            font-size: 9pt;
+        }
+        
+        .consent-item input[type="checkbox"] {
+            margin-right: 8px;
+            margin-top: 1px;
+            flex-shrink: 0;
+        }
+        
+        .signature-area {
+            border: 2px solid #2c5aa0;
+            background: #f0f4f8;
+            border-radius: 6px;
+            padding: 15px;
+            margin-top: 15px;
+        }
+        
+        .signature-box {
+            border: 1px solid #999;
+            height: 40px;
+            margin: 8px 0;
+            background: #fff;
+            border-radius: 3px;
+        }
+        
+        .small-input {
+            width: 60px !important;
+            display: inline-block;
+        }
+        
+        .medium-input {
+            width: 120px !important;
+            display: inline-block;
+        }
+        
+        .full-width {
+            width: 100% !important;
+        }
+        
+        .text-center {
+            text-align: center;
+        }
+        
+        .highlight {
+            background: #fff3cd;
+            padding: 8px;
+            border-radius: 4px;
+            border-left: 3px solid #ffc107;
+            margin: 8px 0;
+            font-size: 9pt;
+        }
+        
+        .contraindication-section {
+            background: #ffe6e6;
+            border: 2px solid #dc3545;
+            border-radius: 6px;
+            padding: 10px;
+            margin: 10px 0;
+        }
+        
+        .contraindication-title {
+            font-weight: bold;
+            color: #dc3545;
+            margin-bottom: 8px;
+            font-size: 10pt;
+        }
+        
+        .medication-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 8px;
+        }
+        
+        .compact-section {
+            margin-bottom: 12px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">Laser Tattoo Removal Consultation Form</div>
+    
+    <div class="clinic-info">
+        <strong>Clinic:</strong> _________________ &nbsp;
+        <strong>Date:</strong> __________ &nbsp;
+        <strong>Time:</strong> __________ &nbsp;
+        <strong>Provider:</strong> _________________
+    </div>
+    
+    <!-- PATIENT INFORMATION -->
+    <div class="section compact-section">
+        <div class="section-title">Patient Information</div>
+        <div class="form-row">
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name">
+            </div>
+            <div class="form-group">
+                <label for="dob">Date of Birth</label>
+                <input type="date" id="dob" name="dob">
+            </div>
+            <div class="form-group">
+                <label for="age">Age</label>
+                <input type="text" id="age" name="age" class="small-input">
+            </div>
+            <div class="form-group">
+                <label>Gender</label>
+                <div class="inline-checkboxes">
+                    <label><input type="checkbox"> M</label>
+                    <label><input type="checkbox"> F</label>
+                    <label><input type="checkbox"> Other</label>
+                </div>
+            </div>
+        </div>
+        
+        <div class="form-row">
+            <div class="form-group">
+                <label for="phone">Phone</label>
+                <input type="tel" id="phone" name="phone">
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email">
+            </div>
+            <div class="form-group">
+                <label for="emergency_contact">Emergency Contact</label>
+                <input type="text" id="emergency_contact" name="emergency_contact">
+            </div>
+            <div class="form-group">
+                <label for="emergency_phone">Emergency Phone</label>
+                <input type="tel" id="emergency_phone" name="emergency_phone">
+            </div>
+        </div>
+    </div>
+
+    <!-- ABSOLUTE CONTRAINDICATIONS -->
+    <div class="contraindication-section">
+        <div class="contraindication-title">⚠️ ABSOLUTE CONTRAINDICATIONS (Check any that apply)</div>
+        <div class="checkbox-grid">
+            <div class="checkbox-item"><input type="checkbox"> Pregnancy/Nursing</div>
+            <div class="checkbox-item"><input type="checkbox"> Active skin cancer in area</div>
+            <div class="checkbox-item"><input type="checkbox"> Active infection in area</div>
+            <div class="checkbox-item"><input type="checkbox"> Open wounds/lesions</div>
+            <div class="checkbox-item"><input type="checkbox"> Recent Accutane (&lt;6 months)</div>
+            <div class="checkbox-item"><input type="checkbox"> Gold therapy (current/recent)</div>
+            <div class="checkbox-item"><input type="checkbox"> Unrealistic expectations</div>
+            <div class="checkbox-item"><input type="checkbox"> Unable to avoid sun exposure</div>
+        </div>
+    </div>
+
+    <!-- MEDICAL HISTORY & RELATIVE CONTRAINDICATIONS -->
+    <div class="section compact-section">
+        <div class="section-title">Medical History & Relative Contraindications</div>
+        <div class="two-column">
+            <div>
+                <div class="highlight"><strong>Systemic Conditions:</strong></div>
+                <div class="checkbox-grid">
+                    <div class="checkbox-item"><input type="checkbox"> Diabetes (uncontrolled)</div>
+                    <div class="checkbox-item"><input type="checkbox"> Heart disease</div>
+                    <div class="checkbox-item"><input type="checkbox"> Hypertension</div>
+                    <div class="checkbox-item"><input type="checkbox"> Autoimmune disorders</div>
+                    <div class="checkbox-item"><input type="checkbox"> Immunocompromised</div>
+                    <div class="checkbox-item"><input type="checkbox"> Blood disorders</div>
+                    <div class="checkbox-item"><input type="checkbox"> Cancer history</div>
+                    <div class="checkbox-item"><input type="checkbox"> Epilepsy/Seizures</div>
+                    <div class="checkbox-item"><input type="checkbox"> Thyroid disease</div>
+                    <div class="checkbox-item"><input type="checkbox"> Connective tissue disorders</div>
+                    <div class="checkbox-item"><input type="checkbox"> Hemophilia/bleeding disorders</div>
+                    <div class="checkbox-item"><input type="checkbox"> Liver disease</div>
+                </div>
+                
+                <div class="highlight" style="margin-top: 10px;"><strong>Skin Conditions:</strong></div>
+                <div class="checkbox-grid">
+                    <div class="checkbox-item"><input type="checkbox"> Keloid/hypertrophic scarring</div>
+                    <div class="checkbox-item"><input type="checkbox"> Vitiligo</div>
+                    <div class="checkbox-item"><input type="checkbox"> Psoriasis</div>
+                    <div class="checkbox-item"><input type="checkbox"> Eczema/Dermatitis</div>
+                    <div class="checkbox-item"><input type="checkbox"> Herpes simplex (area)</div>
+                    <div class="checkbox-item"><input type="checkbox"> Poor wound healing</div>
+                    <div class="checkbox-item"><input type="checkbox"> Hyperpigmentation tendency</div>
+                    <div class="checkbox-item"><input type="checkbox"> Hypopigmentation tendency</div>
+                    <div class="checkbox-item"><input type="checkbox"> Photosensitive conditions</div>
+                    <div class="checkbox-item"><input type="checkbox"> Recent sunburn</div>
+                </div>
+            </div>
+            
+            <div>
+                <div class="highlight"><strong>Physical Factors:</strong></div>
+                <div class="checkbox-grid">
+                    <div class="checkbox-item"><input type="checkbox"> Pacemaker</div>
+                    <div class="checkbox-item"><input type="checkbox"> Metal implants near area</div>
+                    <div class="checkbox-item"><input type="checkbox"> Tattoo over lymph nodes</div>
+                    <div class="checkbox-item"><input type="checkbox"> Recent surgery (area)</div>
+                    <div class="checkbox-item"><input type="checkbox"> Active tan/sunless tanner</div>
+                    <div class="checkbox-item"><input type="checkbox"> Recent IPL/laser (area)</div>
+                    <div class="checkbox-item"><input type="checkbox"> Recent chemical peel</div>
+                    <div class="checkbox-item"><input type="checkbox"> Recent injections (area)</div>
+                </div>
+                
+                <div class="highlight" style="margin-top: 10px;"><strong>Infectious Disease:</strong></div>
+                <div class="checkbox-grid">
+                    <div class="checkbox-item"><input type="checkbox"> HIV/AIDS</div>
+                    <div class="checkbox-item"><input type="checkbox"> Hepatitis B/C</div>
+                    <div class="checkbox-item"><input type="checkbox"> Active tuberculosis</div>
+                    <div class="checkbox-item"><input type="checkbox"> MRSA history</div>
+                </div>
+                
+                <div class="highlight" style="margin-top: 10px;"><strong>Age/Development:</strong></div>
+                <div class="checkbox-grid">
+                    <div class="checkbox-item"><input type="checkbox"> Under 18 years</div>
+                    <div class="checkbox-item"><input type="checkbox"> Tattoo &lt;3 months old</div>
+                    <div class="checkbox-item"><input type="checkbox"> Still healing from tattoo</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MEDICATIONS & PHOTOSENSITIZING DRUGS -->
+    <div class="section compact-section">
+        <div class="section-title">Current Medications & Photosensitizing Drugs</div>
+        <div class="medication-grid">
+            <div>
+                <div class="highlight"><strong>High-Risk Medications:</strong></div>
+                <div class="checkbox-grid">
+                    <div class="checkbox-item"><input type="checkbox"> Accutane/Retinoids</div>
+                    <div class="checkbox-item"><input type="checkbox"> Blood thinners (Warfarin, etc.)</div>
+                    <div class="checkbox-item"><input type="checkbox"> Immunosuppressants</div>
+                    <div class="checkbox-item"><input type="checkbox"> Gold salts/compounds</div>
+                    <div class="checkbox-item"><input type="checkbox"> Tetracyclines</div>
+                    <div class="checkbox-item"><input type="checkbox"> Quinolones (Cipro, etc.)</div>
+                    <div class="checkbox-item"><input type="checkbox"> Sulfonamides</div>
+                    <div class="checkbox-item"><input type="checkbox"> St. John's Wort</div>
+                    <div class="checkbox-item"><input type="checkbox"> NSAIDs (high dose)</div>
+                    <div class="checkbox-item"><input type="checkbox"> Griseofulvin</div>
+                </div>
+            </div>
+            
+            <div>
+                <div class="highlight"><strong>Other Photosensitizers:</strong></div>
+                <div class="checkbox-grid">
+                    <div class="checkbox-item"><input type="checkbox"> Antimalarials</div>
+                    <div class="checkbox-item"><input type="checkbox"> Thiazide diuretics</div>
+                    <div class="checkbox-item"><input type="checkbox"> Phenothiazines</div>
+                    <div class="checkbox-item"><input type="checkbox"> Amiodarone</div>
+                    <div class="checkbox-item"><input type="checkbox"> Furosemide</div>
+                    <div class="checkbox-item"><input type="checkbox"> Alpha-hydroxy acids</div>
+                    <div class="checkbox-item"><input type="checkbox"> Coal tar derivatives</div>
+                    <div class="checkbox-item"><input type="checkbox"> Psoralen</div>
+                </div>
+                
+                <div style="margin-top: 8px;">
+                    <label><strong>Complete medication list:</strong></label>
+                    <textarea placeholder="List ALL medications, supplements, vitamins..." style="min-height: 30px;"></textarea>
+                </div>
+            </div>
+        </div>
+        
+        <div class="form-group" style="margin-top: 8px;">
+            <label>Allergies:</label>
+            <div class="inline-checkboxes">
+                <label><input type="checkbox"> None</label>
+                <label><input type="checkbox"> Medications</label>
+                <label><input type="checkbox"> Latex</label>
+                <label><input type="checkbox"> Anesthetics</label>
+                <input type="text" placeholder="Other allergies..." style="margin-left: 10px; width: 200px;">
+            </div>
+        </div>
+    </div>
+
+    <!-- SKIN ASSESSMENT - IMPROVED LAYOUT -->
+    <div class="section compact-section">
+        <div class="section-title">Skin Assessment</div>
+        
+        <div class="form-group">
+            <label><strong>Fitzpatrick Skin Type:</strong></label>
+            <div class="skin-type-grid">
+                <div class="skin-type-item">
+                    <input type="checkbox" id="type1">
+                    <label for="type1">Type I <span class="skin-type-description">(Always burns, never tans)</span></label>
+                </div>
+                <div class="skin-type-item">
+                    <input type="checkbox" id="type2">
+                    <label for="type2">Type II <span class="skin-type-description">(Usually burns, tans minimally)</span></label>
+                </div>
+                <div class="skin-type-item">
+                    <input type="checkbox" id="type3">
+                    <label for="type3">Type III <span class="skin-type-description">(Sometimes burns, tans gradually)</span></label>
+                </div>
+                <div class="skin-type-item">
+                    <input type="checkbox" id="type4">
+                    <label for="type4">Type IV <span class="skin-type-description">(Burns minimally, tans well)</span></label>
+                </div>
+                <div class="skin-type-item">
+                    <input type="checkbox" id="type5">
+                    <label for="type5">Type V <span class="skin-type-description">(Rarely burns, tans darkly)</span></label>
+                </div>
+                <div class="skin-type-item">
+                    <input type="checkbox" id="type6">
+                    <label for="type6">Type VI <span class="skin-type-description">(Never burns, deeply pigmented)</span></label>
+                </div>
+            </div>
+        </div>
+        
+        <div class="three-column" style="margin-top: 15px;">
+            <div>
+                <label><strong>Sun Exposure:</strong></label>
+                <div class="inline-checkboxes">
+                    <label><input type="checkbox"> Minimal</label>
+                    <label><input type="checkbox"> Moderate</label>
+                    <label><input type="checkbox"> High</label>
+                </div>
+                <div style="margin-top: 4px;">
+                    <label><input type="checkbox"> Tanning bed use</label>
+                </div>
+            </div>
+            
+            <div>
+                <label><strong>Sunscreen Use:</strong></label>
+                <div class="inline-checkboxes">
+                    <label><input type="checkbox"> Daily</label>
+                    <label><input type="checkbox"> Sometimes</label>
+                    <label><input type="checkbox"> Rarely</label>
+                </div>
+            </div>
+            
+            <div>
+                <label><strong>Recent Sun Exposure:</strong></label>
+                <div class="inline-checkboxes">
+                    <label><input type="checkbox"> None</label>
+                    <label><input type="checkbox"> Some</label>
+                    <label><input type="checkbox"> Significant</label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="page-break"></div>
+
+    <!-- TATTOO INFORMATION -->
+    <div class="section compact-section">
+        <div class="section-title">Tattoo Information</div>
+        <div class="tattoo-cards">
+            <div class="tattoo-card">
+                <h4>Tattoo #1</h4>
+                <div class="form-group">
+                    <label>Location:</label>
+                    <input type="text" placeholder="Body part">
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Size (cm):</label>
+                        <input type="text" placeholder="L x W">
+                    </div>
+                    <div class="form-group">
+                        <label>Age:</label>
+                        <input type="text" class="small-input" placeholder="Years">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Quality:</label>
+                    <div class="inline-checkboxes">
+                        <label><input type="checkbox"> Professional</label>
+                        <label><input type="checkbox"> Amateur</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Colors:</label>
+                    <div class="color-grid">
+                        <label><input type="checkbox"> Black</label>
+                        <label><input type="checkbox"> Red</label>
+                        <label><input type="checkbox"> Blue</label>
+                        <label><input type="checkbox"> Yellow</label>
+                        <label><input type="checkbox"> Green</label>
+                        <label><input type="checkbox"> Orange</label>
+                        <label><input type="checkbox"> Purple</label>
+                        <label><input type="checkbox"> White</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Previous treatments:</label>
+                    <input type="text" class="small-input" placeholder="Number">
+                </div>
+            </div>
+            
+            <div class="tattoo-card">
+                <h4>Tattoo #2</h4>
+                <div class="form-group">
+                    <label>Location:</label>
+                    <input type="text" placeholder="Body part">
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Size (cm):</label>
+                        <input type="text" placeholder="L x W">
+                    </div>
+                    <div class="form-group">
+                        <label>Age:</label>
+                        <input type="text" class="small-input" placeholder="Years">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Quality:</label>
+                    <div class="inline-checkboxes">
+                        <label><input type="checkbox"> Professional</label>
+                        <label><input type="checkbox"> Amateur</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Colors:</label>
+                    <div class="color-grid">
+                        <label><input type="checkbox"> Black</label>
+                        <label><input type="checkbox"> Red</label>
+                        <label><input type="checkbox"> Blue</label>
+                        <label><input type="checkbox"> Yellow</label>
+                        <label><input type="checkbox"> Green</label>
+                        <label><input type="checkbox"> Orange</label>
+                        <label><input type="checkbox"> Purple</label>
+                        <label><input type="checkbox"> White</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Previous treatments:</label>
+                    <input type="text" class="small-input" placeholder="Number">
+                </div>
+            </div>
+        </div>
+        
+        <div class="form-row" style="margin-top: 10px;">
+            <div class="form-group">
+                <label>Treatment Goal:</label>
+                <div class="inline-checkboxes">
+                    <label><input type="checkbox"> Complete removal</label>
+                    <label><input type="checkbox"> Fading for cover-up</label>
+                    <label><input type="checkbox"> Partial removal</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Timeline/Events:</label>
+                <input type="text" placeholder="Weddings, etc.">
+            </div>
+        </div>
+    </div>
+
+    <!-- LIFESTYLE FACTORS -->
+    <div class="section compact-section">
+        <div class="section-title">Lifestyle & Risk Factors</div>
+        <div class="three-column">
+            <div>
+                <label><strong>Smoking:</strong></label>
+                <div class="inline-checkboxes">
+                    <label><input type="checkbox"> Never</label>
+                    <label><input type="checkbox"> Former</label>
+                    <label><input type="checkbox"> Current</label>
+                </div>
+                <label style="margin-top: 4px;">Packs/day: <input type="text" class="small-input"></label>
+            </div>
+            
+            <div>
+                <label><strong>Alcohol:</strong></label>
+                <div class="inline-checkboxes">
+                    <label><input type="checkbox"> None</label>
+                    <label><input type="checkbox"> Social</label>
+                    <label><input type="checkbox"> Heavy</label>
+                </div>
+            </div>
+            
+            <div>
+                <label><strong>Exercise:</strong></label>
+                <div class="inline-checkboxes">
+                    <label><input type="checkbox"> None</label>
+                    <label><input type="checkbox"> Light</label>
+                    <label><input type="checkbox"> Intense</label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- INFORMED CONSENT -->
+    <div class="section compact-section">
+        <div class="section-title">Informed Consent</div>
+        <div class="consent-checklist">
+            <p><strong>Initial each statement:</strong></p>
+            
+            <div class="consent-item">
+                <input type="checkbox">
+                <label>_____ Multiple treatments required (6-15+ sessions, 6-8 week intervals)</label>
+            </div>
+            
+            <div class="consent-item">
+                <input type="checkbox">
+                <label>_____ Complete removal not guaranteed; some fading may be permanent result</label>
+            </div>
+            
+            <div class="consent-item">
+                <input type="checkbox">
+                <label>_____ Common side effects: redness, swelling, blistering, scabbing, pigment changes</label>
+            </div>
+            
+            <div class="consent-item">
+                <input type="checkbox">
+                <label>_____ Rare risks: scarring, infection, allergic reaction, paradoxical darkening</label>
+            </div>
+            
+            <div class="consent-item">
+                <input type="checkbox">
+                <label>_____ Sun protection critical before/after treatments; no tanning/sun exposure</label>
+            </div>
+            
+            <div class="consent-item">
+                <input type="checkbox">
+                <label>_____ Treatment cost not covered by insurance; payment due at service</label>
+            </div>
+            
+            <div class="consent-item">
+                <input type="checkbox">
+                <label>_____ Must follow all pre/post-treatment instructions for optimal results</label>
+            </div>
+            
+            <div class="consent-item">
+                <input type="checkbox">
+                <label>_____ Photography for medical records/monitoring; can discontinue anytime</label>
+            </div>
+        </div>
+    </div>
+
+    <!-- SIGNATURES -->
+    <div class="signature-area">
+        <div class="section-title">Signatures & Authorization</div>
+        <div class="form-row">
+            <div class="form-group">
+                <label><strong>Patient Signature:</strong></label>
+                <div class="signature-box"></div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Date:</label>
+                        <input type="date" class="medium-input">
+                    </div>
+                    <div class="form-group">
+                        <label>Print Name:</label>
+                        <input type="text">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label><strong>Provider Signature:</strong></label>
+                <div class="signature-box"></div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Date:</label>
+                        <input type="date" class="medium-input">
+                    </div>
+                    <div class="form-group">
+                        <label>Print Name:</label>
+                        <input type="text">
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="form-group">
+            <label><strong>Authorization:</strong></label>
+            <div class="inline-checkboxes">
+                <label><input type="checkbox"> Approved for treatment</label>
+                <label><input type="checkbox"> Consultation required</label>
+                <label><input type="checkbox"> Treatment declined</label>
+            </div>
+        </div>
+    </div>
+
+    <!-- OFFICE USE ONLY -->
+    <div class="section">
+        <div class="section-title">For Office Use Only</div>
+        <div class="form-row">
+            <div class="form-group">
+                <label>Patient ID:</label>
+                <input type="text" class="medium-input">
+            </div>
+            <div class="form-group">
+                <label>Next Appointment:</label>
+                <input type="date" class="medium-input">
+            </div>
+            <div class="form-group">
+                <label>Payment Method:</label>
+                <div class="inline-checkboxes">
+                    <label><input type="checkbox"> Cash</label>
+                    <label><input type="checkbox"> Card</label>
+                    <label><input type="checkbox"> Insurance</label>
+                </div>
+            </div>
+        </div>
+        
+        <div class="form-row">
+            <div class="form-group">
+                <label>Treatment Plan:</label>
+                <textarea placeholder="Recommended laser type, settings, number of sessions..." style="min-height: 60px;"></textarea>
+            </div>
+            <div class="form-group">
+                <label>Notes:</label>
+                <textarea placeholder="Additional observations, concerns, follow-up instructions..." style="min-height: 60px;"></textarea>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
