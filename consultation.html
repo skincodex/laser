@@ -7,122 +7,128 @@
     <style>
         @media print {
             body { 
-                margin: 0.5in; 
-                font-size: 9pt !important;
-                line-height: 1.2 !important;
+                margin: 0.4in; 
+                font-size: 8pt !important;
+                line-height: 1.1 !important;
             }
             .page-break { page-break-before: always; }
             .no-print { display: none; }
             .section { 
-                margin-bottom: 8px !important; 
-                padding: 8px !important;
+                margin-bottom: 6px !important; 
+                padding: 6px !important;
             }
-            .form-row { margin-bottom: 6px !important; }
-            .form-group { margin-bottom: 6px !important; }
+            .form-row { margin-bottom: 4px !important; }
+            .form-group { margin-bottom: 4px !important; }
             input[type="text"], input[type="date"], input[type="email"], input[type="tel"] {
-                padding: 2px 4px !important;
-                font-size: 8pt !important;
+                padding: 1px 3px !important;
+                font-size: 7pt !important;
             }
             textarea {
-                padding: 2px 4px !important;
-                font-size: 8pt !important;
-                min-height: 25px !important;
+                padding: 1px 3px !important;
+                font-size: 7pt !important;
+                min-height: 20px !important;
             }
             .signature-box {
-                height: 30px !important;
+                height: 25px !important;
             }
             .checkbox-grid {
-                gap: 2px !important;
+                gap: 1px !important;
             }
             .color-grid {
                 gap: 1px !important;
             }
             .tattoo-cards {
-                gap: 8px !important;
+                gap: 6px !important;
             }
             .tattoo-card {
+                padding: 4px !important;
+            }
+            .consent-checklist {
+                padding: 6px !important;
+            }
+            .signature-area {
                 padding: 6px !important;
             }
         }
         
         @page {
-            margin: 0.5in;
+            margin: 0.4in;
             size: letter;
         }
         
         body {
             font-family: Arial, sans-serif;
-            font-size: 9pt;
-            line-height: 1.2;
-            margin: 0.5in;
+            font-size: 8pt;
+            line-height: 1.1;
+            margin: 0.4in;
             color: #333;
             background: #fff;
-            max-width: 7.5in; /* Standard letter width minus margins */
+            max-width: 7.7in;
         }
         
         .header {
             text-align: center;
-            font-size: 14pt;
+            font-size: 12pt;
             font-weight: bold;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
             color: #2c5aa0;
             border-bottom: 2px solid #2c5aa0;
-            padding-bottom: 6px;
+            padding-bottom: 4px;
         }
         
         .clinic-info {
             text-align: center;
-            font-size: 8pt;
-            margin-bottom: 12px;
+            font-size: 7pt;
+            margin-bottom: 8px;
             background: #f8f9fa;
-            padding: 6px;
+            padding: 4px;
             border-radius: 3px;
         }
         
         .section {
-            margin-bottom: 12px;
+            margin-bottom: 8px;
             border: 1px solid #ddd;
             border-radius: 4px;
-            padding: 8px;
+            padding: 6px;
             background: #fff;
             page-break-inside: avoid;
         }
         
         .section-title {
             font-weight: bold;
-            font-size: 10pt;
+            font-size: 9pt;
             color: #2c5aa0;
             background: #f0f4f8;
-            padding: 4px 8px;
-            margin: -8px -8px 8px -8px;
+            padding: 3px 6px;
+            margin: -6px -6px 6px -6px;
             border-radius: 4px 4px 0 0;
             border-bottom: 1px solid #2c5aa0;
         }
         
         .form-row {
             display: flex;
-            margin-bottom: 8px;
-            gap: 10px;
+            margin-bottom: 6px;
+            gap: 8px;
         }
         
         .form-group {
             flex: 1;
-            margin-bottom: 6px;
+            margin-bottom: 4px;
         }
         
         .form-group label {
             display: block;
             font-weight: 600;
-            margin-bottom: 2px;
+            margin-bottom: 1px;
             color: #555;
-            font-size: 8pt;
+            font-size: 7pt;
         }
         
         input[type="text"], input[type="date"], input[type="email"], input[type="tel"] {
             border: 1px solid #ccc;
             border-radius: 2px;
-            padding: 3px 5px;
-            font-size: 8pt;
+            padding: 2px 4px;
+            font-size: 7pt;
             width: 100%;
             box-sizing: border-box;
             background: #fff;
@@ -130,92 +136,92 @@
         
         .checkbox-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-            gap: 2px;
-            margin-top: 4px;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 1px;
+            margin-top: 3px;
         }
         
         .checkbox-item {
             display: flex;
             align-items: center;
             padding: 1px;
-            font-size: 8pt;
+            font-size: 7pt;
         }
         
         input[type="checkbox"] {
-            margin-right: 4px;
-            transform: scale(0.9);
+            margin-right: 3px;
+            transform: scale(0.8);
         }
         
         .inline-checkboxes {
             display: flex;
-            gap: 10px;
+            gap: 8px;
             flex-wrap: wrap;
-            margin-top: 4px;
+            margin-top: 3px;
         }
         
         .inline-checkboxes label {
-            font-size: 8pt;
+            font-size: 7pt;
             font-weight: normal;
         }
         
         .compact-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 2px;
-            margin-top: 4px;
+            gap: 1px;
+            margin-top: 3px;
         }
         
         .two-column {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 10px;
+            gap: 8px;
         }
         
         .three-column {
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
-            gap: 8px;
+            gap: 6px;
         }
         
         .tattoo-cards {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 10px;
-            margin-top: 8px;
+            gap: 8px;
+            margin-top: 6px;
         }
         
         .tattoo-card {
             border: 1px solid #e9ecef;
             border-radius: 4px;
-            padding: 6px;
+            padding: 4px;
             background: #f8f9fa;
         }
         
         .tattoo-card h4 {
-            margin: 0 0 6px 0;
+            margin: 0 0 4px 0;
             color: #2c5aa0;
-            font-size: 9pt;
+            font-size: 8pt;
         }
         
         .color-grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             gap: 1px;
-            margin-top: 4px;
+            margin-top: 3px;
         }
         
         .color-grid label {
-            font-size: 7pt;
+            font-size: 6pt;
         }
         
         textarea {
             border: 1px solid #ccc;
             border-radius: 2px;
-            padding: 3px 5px;
-            font-size: 8pt;
+            padding: 2px 4px;
+            font-size: 7pt;
             width: 100%;
-            min-height: 30px;
+            min-height: 20px;
             resize: vertical;
             box-sizing: border-box;
             font-family: Arial, sans-serif;
@@ -225,20 +231,20 @@
             background: #fff3cd;
             border: 1px solid #ffc107;
             border-radius: 4px;
-            padding: 8px;
-            margin: 8px 0;
+            padding: 6px;
+            margin: 6px 0;
         }
         
         .consent-item {
             display: flex;
             align-items: flex-start;
-            margin-bottom: 4px;
+            margin-bottom: 3px;
             padding: 1px;
-            font-size: 8pt;
+            font-size: 7pt;
         }
         
         .consent-item input[type="checkbox"] {
-            margin-right: 6px;
+            margin-right: 4px;
             margin-top: 1px;
             flex-shrink: 0;
         }
@@ -247,60 +253,60 @@
             border: 2px solid #2c5aa0;
             background: #f0f4f8;
             border-radius: 4px;
-            padding: 10px;
-            margin-top: 10px;
+            padding: 6px;
+            margin-top: 6px;
         }
         
         .signature-box {
             border: 1px solid #999;
-            height: 35px;
-            margin: 6px 0;
+            height: 25px;
+            margin: 4px 0;
             background: #fff;
             border-radius: 2px;
         }
         
         .small-input {
-            width: 50px !important;
+            width: 40px !important;
             display: inline-block;
         }
         
         .medium-input {
-            width: 100px !important;
+            width: 80px !important;
             display: inline-block;
         }
         
         .highlight {
             background: #fff3cd;
-            padding: 4px;
+            padding: 3px;
             border-radius: 3px;
             border-left: 2px solid #ffc107;
-            margin: 4px 0;
-            font-size: 8pt;
+            margin: 3px 0;
+            font-size: 7pt;
         }
         
         .contraindication-section {
             background: #ffe6e6;
             border: 2px solid #dc3545;
             border-radius: 4px;
-            padding: 8px;
-            margin: 8px 0;
+            padding: 6px;
+            margin: 6px 0;
         }
         
         .contraindication-title {
             font-weight: bold;
             color: #dc3545;
-            margin-bottom: 6px;
-            font-size: 9pt;
+            margin-bottom: 4px;
+            font-size: 8pt;
         }
         
         .medication-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 8px;
+            gap: 6px;
         }
         
         .compact-section {
-            margin-bottom: 8px;
+            margin-bottom: 6px;
         }
     </style>
 </head>
@@ -396,7 +402,7 @@
                     <div class="checkbox-item"><input type="checkbox"> Liver disease</div>
                 </div>
                 
-                <div class="highlight" style="margin-top: 6px;"><strong>Skin Conditions:</strong></div>
+                <div class="highlight" style="margin-top: 4px;"><strong>Skin Conditions:</strong></div>
                 <div class="checkbox-grid">
                     <div class="checkbox-item"><input type="checkbox"> Keloid/hypertrophic scarring</div>
                     <div class="checkbox-item"><input type="checkbox"> Vitiligo</div>
@@ -424,7 +430,7 @@
                     <div class="checkbox-item"><input type="checkbox"> Recent injections (area)</div>
                 </div>
                 
-                <div class="highlight" style="margin-top: 6px;"><strong>Infectious Disease:</strong></div>
+                <div class="highlight" style="margin-top: 4px;"><strong>Infectious Disease:</strong></div>
                 <div class="checkbox-grid">
                     <div class="checkbox-item"><input type="checkbox"> HIV/AIDS</div>
                     <div class="checkbox-item"><input type="checkbox"> Hepatitis B/C</div>
@@ -432,7 +438,7 @@
                     <div class="checkbox-item"><input type="checkbox"> MRSA history</div>
                 </div>
                 
-                <div class="highlight" style="margin-top: 6px;"><strong>Age/Development:</strong></div>
+                <div class="highlight" style="margin-top: 4px;"><strong>Age/Development:</strong></div>
                 <div class="checkbox-grid">
                     <div class="checkbox-item"><input type="checkbox"> Under 18 years</div>
                     <div class="checkbox-item"><input type="checkbox"> Tattoo &lt;3 months old</div>
@@ -475,21 +481,21 @@
                     <div class="checkbox-item"><input type="checkbox"> Psoralen</div>
                 </div>
                 
-                <div style="margin-top: 6px;">
+                <div style="margin-top: 4px;">
                     <label><strong>Complete medication list:</strong></label>
-                    <textarea placeholder="List ALL medications, supplements, vitamins..." style="min-height: 25px;"></textarea>
+                    <textarea placeholder="List ALL medications, supplements, vitamins..." style="min-height: 20px;"></textarea>
                 </div>
             </div>
         </div>
         
-        <div class="form-group" style="margin-top: 6px;">
+        <div class="form-group" style="margin-top: 4px;">
             <label>Allergies:</label>
             <div class="inline-checkboxes">
                 <label><input type="checkbox"> None</label>
                 <label><input type="checkbox"> Medications</label>
                 <label><input type="checkbox"> Latex</label>
                 <label><input type="checkbox"> Anesthetics</label>
-                <input type="text" placeholder="Other allergies..." style="margin-left: 8px; width: 150px;">
+                <input type="text" placeholder="Other allergies..." style="margin-left: 6px; width: 120px;">
             </div>
         </div>
     </div>
@@ -517,7 +523,7 @@
                     <label><input type="checkbox"> Moderate</label>
                     <label><input type="checkbox"> High</label>
                 </div>
-                <div style="margin-top: 3px;">
+                <div style="margin-top: 2px;">
                     <label><input type="checkbox"> Tanning bed use</label>
                 </div>
             </div>
@@ -532,8 +538,6 @@
             </div>
         </div>
     </div>
-
-    <div class="page-break"></div>
 
     <!-- TATTOO INFORMATION -->
     <div class="section compact-section">
@@ -624,7 +628,7 @@
             </div>
         </div>
         
-        <div class="form-row" style="margin-top: 8px;">
+        <div class="form-row" style="margin-top: 6px;">
             <div class="form-group">
                 <label>Treatment Goal:</label>
                 <div class="inline-checkboxes">
@@ -651,7 +655,7 @@
                     <label><input type="checkbox"> Former</label>
                     <label><input type="checkbox"> Current</label>
                 </div>
-                <label style="margin-top: 3px;">Packs/day: <input type="text" class="small-input"></label>
+                <label style="margin-top: 2px;">Packs/day: <input type="text" class="small-input"></label>
             </div>
             
             <div>
@@ -678,7 +682,7 @@
     <div class="section compact-section">
         <div class="section-title">Informed Consent</div>
         <div class="consent-checklist">
-            <p><strong>Initial each statement:</strong></p>
+            <p style="margin: 0 0 4px 0;"><strong>Initial each statement:</strong></p>
             
             <div class="consent-item">
                 <input type="checkbox">
@@ -757,8 +761,13 @@
             </div>
         </div>
         
-        <div class="form-group">
+        <div class="form-group" style="margin-top: 4px;">
             <label><strong>Authorization:</strong></label>
             <div class="inline-checkboxes">
                 <label><input type="checkbox"> Approved for treatment</label>
                 <label><input type="checkbox"> Consultation required</label>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
